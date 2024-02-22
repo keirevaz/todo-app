@@ -25,7 +25,8 @@ function TaskPage() {
   };
 
   const addNewTask = async (event) => {
-    if (event.key === "Enter") {
+    console.log(task.trim());
+    if (event.key === "Enter" && task.trim() !== "") {
       await addNewTaskAPI(username, task);
       setTask("");
       fetchTasks();
@@ -52,7 +53,7 @@ function TaskPage() {
           type={"text"}
           id={"task"}
           name={"task"}
-          placeholder="Type a task and press Enter to add"
+          placeholder={"Type a task and press Enter to add"}
           value={task}
           onChange={handleTaskChange}
           onKeyPress={addNewTask}

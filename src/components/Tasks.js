@@ -9,9 +9,9 @@ const Tasks = ({ list, deleteTask, saveUpdatedTask }) => {
   }, [list]);
 
   const updateSelectedTask = (index, value) => {
-    let updatedTaskList = taskList.map((item, i) => {
-      if (index === i) {
-        item.task = value;
+    const updatedTaskList = taskList.map((item, i) => {
+      if (i === index) {
+        return { ...item, task: value };
       }
       return item;
     });
@@ -19,9 +19,14 @@ const Tasks = ({ list, deleteTask, saveUpdatedTask }) => {
   };
 
   const saveSelectedTask = async (index, event) => {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" && taskList[index].task.trim() !== "") {
       await saveUpdatedTask(taskList[index]);
+      event.target.blur();
     }
+  };
+
+  const revertChanges = () => {
+    setTaskList(list);
   };
 
   const renderTasks = () => {
@@ -32,7 +37,7 @@ const Tasks = ({ list, deleteTask, saveUpdatedTask }) => {
             <Input
               type={"text"}
               value={item.task}
-              onBlur={() => setTaskList(list)}
+              onBlur={() => revertChanges()}
               onChange={(e) => updateSelectedTask(index, e.target.value)}
               onKeyPress={(e) => saveSelectedTask(index, e)}
             />

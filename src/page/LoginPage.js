@@ -47,8 +47,6 @@ function LoginPage() {
     setTimeout(() => {
       setLoading(false);
       dispatch(login(username, firstName, lastName));
-      localStorage.setItem("isAuthenticated", "true");
-      localStorage.setItem("username", username);
       navigate("/");
     }, 1000);
   };
