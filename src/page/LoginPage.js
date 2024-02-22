@@ -50,7 +50,7 @@ function LoginPage() {
       localStorage.setItem("isAuthenticated", "true");
       localStorage.setItem("username", username);
       navigate("/");
-    }, 2000);
+    }, 1000);
   };
 
   return isLoading ? (

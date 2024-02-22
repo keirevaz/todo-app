@@ -17,14 +17,11 @@ afterEach(() => {
 
 test("fail login", () => {
   instance.get.mockResolvedValue({ data: {} });
-  const { getByLabelText, getByText, getByPlaceholderText } = render(
+  const { getByText } = render(
     <Provider store={store}>
       <App />
     </Provider>
   );
-
-  const usernameInput = getByPlaceholderText("Username");
-  const firstNameInput = getByPlaceholderText("First Name");
   const submitButton = getByText("Login");
 
   fireEvent.click(submitButton);
@@ -34,7 +31,7 @@ test("fail login", () => {
 
 test("succesful login", () => {
   instance.get.mockResolvedValue({ data: {} });
-  const { getByLabelText, getByText, getByPlaceholderText } = render(
+  const { getByText, getByPlaceholderText } = render(
     <Provider store={store}>
       <App />
     </Provider>

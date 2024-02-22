@@ -36,8 +36,8 @@ const Tasks = ({ list, deleteTask, saveUpdatedTask }) => {
               onChange={(e) => updateSelectedTask(index, e.target.value)}
               onKeyPress={(e) => saveSelectedTask(index, e)}
             />
-            <div class="delete-button" onClick={() => deleteTask(item.id)}>
-              <span class="delete-icon">X</span>
+            <div className="delete-button" onClick={() => deleteTask(item.id)}>
+              <span className="delete-icon">X</span>
             </div>
           </div>
         );
