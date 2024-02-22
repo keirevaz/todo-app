@@ -25,7 +25,6 @@ function TaskPage() {
   };
 
   const addNewTask = async (event) => {
-    console.log(task.trim());
     if (event.key === "Enter" && task.trim() !== "") {
       await addNewTaskAPI(username, task);
       setTask("");
