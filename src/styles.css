@@ -1,0 +1,154 @@
+/* FILEPATH: /C:/Projects/Sim/todo-app/src/styles.css */
+
+/* Body styles */
+body {
+  font-family: Calibri, serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+h1 {
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Login container styles */
+/* display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'  */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+/* Login form styles */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.input-field {
+  padding: 5px;
+  border: 1px solid #ccc;
+  background-color: #fcfcfc;
+  height: 40px;
+  border-radius: 3px;
+}
+.login-form > .input-div {
+  margin-bottom: 16px;
+}
+.login-form .input-field {
+  width: 312px;
+}
+.input-field.error {
+  border: 1px solid red;
+}
+.error-message {
+  color: red;
+  font-size: smaller;
+  margin-left: 1vh;
+}
+
+button {
+  padding: 10px 20px;
+  height: 45px;
+  background-color: #0062ff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+header {
+  padding: 2vh;
+  border-bottom: 1px solid #ccc;
+  background-color: #fcfcfc;
+}
+.header-actions {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  justify-content: flex-end;
+  gap: 4vh;
+}
+.logout-button {
+  width: 100px;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.task-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  align-items: center;
+}
+
+.task-container input {
+  width: 500px;
+}
+.no-task-message {
+  margin-top: 4vh;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  color: #7000ff;
+}
+
+.delete-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #92929d;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #92929d;
+}
+
+.delete-button:hover {
+  background-color: rgb(44, 43, 43);
+}
+
+.delete-icon {
+  font-size: 16px;
+  color: white;
+}
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.task-item {
+  background-color: #f1f1f5;
+  gap: 8px;
+  margin: 8px 0;
+}
+.task-item > div > .input-field {
+  border: 0px !important;
+  background-color: #f1f1f5;
+}
+.task-item > div > .input-field:hover {
+  border: 0px !important;
+}
+.task-item > div > .input-field:focus {
+  background-color: white;
+}
